@@ -1,0 +1,344 @@
+/* ToDo: wird diese Datei noch benötigt? */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px
+}
+
+nav li {
+    margin-right: 20px
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.mainContentSidebarContainter {
+    display: flex;
+    flex-direction: row;
+}
+
+.mainContent {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.sidebar {
+    width: 300px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.upperRow {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.middleRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10 px;
+}
+
+.lowerRow {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.initialRotor {
+    outline: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Courier New", Courier, monospace;
+    background-color: white;
+    justify-content: center;
+}
+
+.center-initial-rotor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.letterRotor {
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 150px;
+    background-image: url('../images/RotorTest.png');
+    background-size: cover;
+}
+
+.rotor-up,
+.rotor-down {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.rotor-up {
+    top: 5px;
+    left: 35px;
+}
+
+.rotor-down {
+    bottom: 35px;
+    left: 35px;
+}
+
+.rotor-letter {
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.insideEnigma {
+    flex: 1;
+    position: absolute;
+    z-index: 1;
+    outline: 2px solid black;
+    flex: 1;
+    margin-bottom: 20px;
+    min-height: 170px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.insideEnigmaRotorSlots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.33%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: 1px dashed black;
+}
+
+.insideEnigmaRotorSlots:nth-child(2) {
+    left: 33.33%;
+
+}
+
+.insideEnigmaRotorSlots:nth-child(3) {
+    left: 66.66%;
+}
+
+.lampPanel {
+    outline: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10 px;
+    font-family: "Courier New", Courier, monospace;
+    background-color: white;
+    justify-content: center;
+}
+
+.bulb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    margin-right: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+}
+
+.virtualKeyboard {
+    outline: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Courier New", Courier, monospace;
+    background-color: white;
+    justify-content: center;
+}
+
+.key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    margin-right: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.key:last-child {
+    margin-right: 0;
+}
+
+.key:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.key:active {
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plugBoard {
+    outline: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10 px;
+    font-family: "Courier New", Courier, monospace;
+    background-color: white;
+    justify-content: center;
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10 px;
+}
+
+.checkboxLabel {
+    font-size: 24 px;
+    margin-bottom: 5px;
+}
+
+.checkboxInput {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    position: relative;
+    outline: none;
+}
+
+.clicked .checkboxInput {
+    background-color: black;
+}
+
+#plaintext,
+#ciphertext {
+    outline: 2px solid black;
+    display: block;
+    margin-bottom: 20px;
+    min-height: 170px;
+}
+
+#plaintext h3,
+#ciphertext h3 {
+    margin-top: 0;
+}
+
+#plaintext p,
+#ciphertext p {
+    word-wrap: break-word;
+    font-family: "Courier New", Courier, monospace;
+    width: 100%;
+    resize: both;
+}
+
+.rotorBox {
+    outline: 2px solid black;
+    display: block;
+    margin-bottom: 20px;
+    min-height: 170px;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+.rotorBoxSlot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.33%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: 1px dashed black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotorBoxSlot:nth-child(2) {
+    left: 33.33%;
+
+}
+
+.rotorBoxSlot:nth-child(3) {
+    left: 66.66%;
+}
+
+.rotorBoxSlot img {
+    max-width: 100%;
+    height: auto;
+}
+
+.goalslot {
+    background-color: hsla(160, 100%, 50%, 0.25);
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

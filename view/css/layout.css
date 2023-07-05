@@ -1,0 +1,339 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/flecktarn.jpg');
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.rotor {
+    color: white;
+    text-shadow: 0 0 3px black, 0 0 5px #0000FF;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px
+}
+
+nav li {
+    margin-right: 20px
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#outer_button {
+    width: 10%;
+    text-align: center;
+}
+
+#button {
+    width: 100%;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mainContentSidebarContainter {
+    display: flex;
+    flex-direction: row;
+    background-image: url('../images/flecktarn.jpg');
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+table,
+tr,
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.mainContent {
+    flex: 1;
+    width: 70%;
+}
+
+.sidebar {
+    width: 30%;
+    margin-left: 20px;
+    padding: 20px;
+    text-shadow: 0 0 3px black, 0 0 5px #0000FF;
+    color: white;
+    border: 2px solid black;
+}
+
+.upperRow {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.middleRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+.lowerRow {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.lampPanel {
+    outline: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+
+    justify-content: center;
+    background: transparent;
+}
+
+.bulb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    margin-right: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+}
+
+.virtualKeyboard {
+    outline: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Courier New", Courier, monospace;
+    background: transparent;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 10px 10px 10px black;
+    transition: 0.1s;
+}
+
+.key:last-child {
+    margin-right: 0;
+}
+
+.key:active {
+    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 0;
+    box-shadow: 0 0 0 transparent;
+}
+
+.key_active_for_js {
+    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 0;
+    box-shadow: 0 0 0 transparent;
+}
+
+.plugBoard {
+    outline: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+    background: transparent;
+    justify-content: center;
+}
+
+.logo {
+
+    width: 10%;
+    position: absolute;
+    left: 20px;
+
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+button {
+    margin: 5px 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.checkboxLabel {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 3px black, 0 0 5px #0000FF;
+}
+
+.checkboxInput {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    position: relative;
+    outline: none;
+}
+
+.clicked .checkboxInput {
+    background-color: black;
+}
+
+#enigmaBook {
+    width: 100%;
+    margin: 0 auto;
+    height: 600px;
+    overflow-y: scroll;
+}
+
+#plaintext {
+    border-right: 2px solid black;
+    margin-right: 5%;
+}
+
+#plaintext,
+#ciphertext {
+    width: 45%;
+    float: left;
+    height: 100vh;
+}
+
+#plaintext h3,
+#ciphertext h3 {
+    margin-top: 0;
+}
+
+#plaintext p,
+#ciphertext p {
+    margin-top: 0;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .mainContentSidebarContainter {
+        flex-direction: column;
+    }
+
+    .mainContent {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        background: transparent;
+    }
+
+    #plaintext,
+    #ciphertext {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header h1 {
+        margin-top: 20px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav li {
+        margin-right: 40px;
+    }
+
+    .mainContentSidebarContainter {
+        flex-direction: row;
+    }
+
+    .mainContent {
+        width: 60%;
+    }
+
+    .sidebar {
+        width: 30%;
+        margin-left: 20px;
+        margin-top: 0;
+    }
+}

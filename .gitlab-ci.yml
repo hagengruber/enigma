@@ -1,0 +1,64 @@
+include:
+  - template: Security/Container-Scanning.gitlab-ci.yml
+  - template: Jobs/SAST.gitlab-ci.yml
+
+stages:
+  - test
+  - build
+  - e2e_test
+  - scan
+
+run_unit_test:
+  stage: test
+  image: docker:20.10.16-dind  # Only for the docker Client
+  before_script:
+    - apk update
+    - apk add python3 py3-pip
+    - pip3 install pytest pytest-cov requests
+  script:
+    - cd Tests/Unit-Tests
+    - pytest --cov=.
+
+build_image:
+  stage: build
+  image: docker:20.10.16  # Only for the docker Client
+  services:
+    - docker:20.10.16-dind  # Docker Deamon
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"  # For authenticating Deamon and Client
+  before_script:
+    - docker login registry.mygit.th-deg.de -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+  script:
+    - docker build -t registry.mygit.th-deg.de/sk04333/enigma .
+    - docker push registry.mygit.th-deg.de/sk04333/enigma
+
+run_e2e_test:
+  stage: e2e_test
+  image: docker:20.10.16-dind  # Only for the docker Client
+  services:
+    - name: selenium/standalone-firefox:latest
+      alias: selenium
+    - name: selenium/standalone-firefox:latest
+      alias: selenium2
+    - name: selenium/standalone-firefox:latest
+      alias: selenium3
+    - name: registry.mygit.th-deg.de/sk04333/enigma
+      alias: enigma
+  variables:
+    FF_NETWORK_PER_BUILD: 1
+  before_script:
+    - apk update
+    - apk add python3 py3-pip
+    - pip3 install pytest==7.3.1 selenium==4.9.1 requests==2.30.0
+  script:
+    - python3 -m pytest Tests/E2E-Tests
+    - python3 -m pytest Tests/Integration-Tests/
+
+
+#Scanning with Trivy
+container_scanning:
+  stage: scan
+  variables:
+    SECURE_LOG_LEVEL: 'debug'
+    CS_IMAGE: 'registry.mygit.th-deg.de/sk04333/enigma'
+    GIT_STRATEGY: 'fetch'

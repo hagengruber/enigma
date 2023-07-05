@@ -1,0 +1,119 @@
+{
+    "Enigma B" : { 
+        "etw" : "ABCDEFGHIJKLMNOPQRSTUVXYZÅÄÖ",
+        "rotoren": {
+            "I" : {"alphabet": "PSBGÖXQJDHOÄUCFRTEZVÅINLYMKA", "Notch":"G","Turnover": "Ä","nr":1},
+            "II" : {"alphabet": "CHNSYÖADMOTRZXBÄIGÅEKQUPFLVJ", "Notch":"G","Turnover": "Ä","nr":1},
+            "III" : {"alphabet": "ÅVQIAÄXRJBÖZSPCFYUNTHDOMEKGL", "Notch":"G","Turnover": "Ä","nr":1}
+        },
+        "used_rotors": 3,
+        "reflectoren": [
+            {"name": "ukw-a", "alphabet": "LDGBÄNCPSKJAVFZHXUIÅRMQÖOTEY"}
+        ],
+        "plugboard": false
+    },
+
+    "Enigma 1" : {
+        "etw" : "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "rotoren": {
+            "I": {
+                "alphabet": "EKMFLGDQVZNTOWYHXUSPAIBRCJ",
+                "Notch": "Y",
+                "Turnover": "Q",
+                "nr": 1
+            },
+            "II": {
+                "alphabet": "AJDKSIRUXBLHWTMCQGZNPYFVOE",
+                "Notch": "M",
+                "Turnover": "E",
+                "nr": 1
+            },
+            "III": {
+                "alphabet": "BDFHJLCPRTXVZNYEIWGAKMUSQO",
+                "Notch": "D",
+                "Turnover": "V",
+                "nr": 1
+            },
+            "IV": {
+                "alphabet": "ESOVPZJAYQUIRHXLNFTGKDCMWB",
+                "Notch": "R",
+                "Turnover": "J",
+                "nr": 1
+            },
+            "V": {
+                "alphabet": "VZBRGITYUPSDNHLXAWMJQOFECK",
+                "Notch": "H",
+                "Turnover": "Z",
+                "nr": 1
+            }
+        },
+        "used_rotors": 3,
+        "reflectoren": [
+            {"name": "ukw-a", "alphabet": "EJMZALYXVBWFCRQUONTSPIKHGD"},
+            {"name": "ukw-b", "alphabet": "YRUHQSLDPXNGOKMIEBFZCWVJAT"},
+            {"name": "ukw-c", "alphabet": "FVPJIAOYEDRZXWGCTKUQSBNMHL"}
+        ],
+        "plugboard": true
+    },
+
+    "Enigma M3" : { 
+        "etw" : "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "rotoren": {
+            "I": {
+                "alphabet": "EKMFLGDQVZNTOWYHXUSPAIBRCJ",
+                "Notch": "Y",
+                "Turnover": "Q",
+                "nr": 1
+            },
+            "II": {
+                "alphabet": "AJDKSIRUXBLHWTMCQGZNPYFVOE",
+                "Notch": "M",
+                "Turnover": "E",
+                "nr": 1
+            },
+            "III": {
+                "alphabet": "BDFHJLCPRTXVZNYEIWGAKMUSQO",
+                "Notch": "D",
+                "Turnover": "V",
+                "nr": 1
+            },
+            "IV": {
+                "alphabet": "ESOVPZJAYQUIRHXLNFTGKDCMWB",
+                "Notch": "R",
+                "Turnover": "J",
+                "nr": 1
+            },
+            "V": {
+                "alphabet": "VZBRGITYUPSDNHLXAWMJQOFECK",
+                "Notch": "H",
+                "Turnover": "Z",
+                "nr": 1
+            },
+            "VI": {
+                "alphabet": "JPGVOUMFYQBENHZRDKASXLICTW",
+                "Notch": "HU",
+                "Turnover": "ZM",
+                "nr": 2
+            },
+            "VII": {
+                "alphabet": "NZJHGRCXMYSWBOUFAIVLPEKQDT",
+                "Notch": "HU",
+                "Turnover": "ZM",
+                "nr": 2
+            },
+            "VIII": {
+                "alphabet": "FKQHTLXOCBJSPDZRAMEWNIUYGV",
+                "Notch": "HU",
+                "Turnover": "ZM",
+                "nr": 2
+            }
+        },
+        "used_rotors": 3,
+        "reflectoren": [
+            {"name": "ukw-b", "alphabet": "YRUHQSLDPXNGOKMIEBFZCWVJAT"},
+            {"name": "ukw-c", "alphabet": "FVPJIAOYEDRZXWGCTKUQSBNMHL"}
+        ],
+        "plugboard": true
+    }
+
+}
