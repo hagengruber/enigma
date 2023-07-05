@@ -12,7 +12,7 @@ Die benötigten Packages von der _requirements.txt_ Datei installieren:
 ### Allgemein
 Um das Projekt zu benutzen, muss man den Server starten und sich als Client mit dem Server verbinden.
 ### Server
-Um den Server zu starten, muss lediglich die Datei _main.py_ ausgeführt werden:
+Um den Server zu starten, muss lediglich die Datei _app.py_ ausgeführt werden:
 - ```python3 ./app.py```
 
 Dadurch startet der Server automatisch mit der verwendeten IP-Adresse auf dem Port **8080**
